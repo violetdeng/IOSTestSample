@@ -10,14 +10,27 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet LoadingView *loadingView;
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+#pragma mark - user event
+- (IBAction)onTapStartAnimation:(id)sender
+{
+    self.loadingView.delegate = self;
+    [self.loadingView startAnimation];
 }
 
+- (IBAction)onTapStopAnimation:(id)sender
+{
+    [self.loadingView stopAnimation];
+}
+
+- (void)loadingViewEnd:(CGFloat)totalTime
+{
+    NSLog(@"total time is %f", totalTime);
+}
 
 @end

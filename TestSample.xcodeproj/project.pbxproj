@@ -14,6 +14,9 @@
 		E2F10F5323AC7625004A7A0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2F10F5223AC7625004A7A0B /* Assets.xcassets */; };
 		E2F10F5623AC7625004A7A0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F10F5423AC7625004A7A0B /* LaunchScreen.storyboard */; };
 		E2F10F5923AC7625004A7A0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F5823AC7625004A7A0B /* main.m */; };
+		E2F10F6123AC8CF3004A7A0B /* LoadingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F6023AC8CF3004A7A0B /* LoadingLayer.m */; };
+		E2F10F6523AC9314004A7A0B /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F6423AC9314004A7A0B /* LoadingView.m */; };
+		E2F10F7123B0A4A1004A7A0B /* LoadingStartLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F7023B0A4A1004A7A0B /* LoadingStartLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		E2F10F5523AC7625004A7A0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2F10F5723AC7625004A7A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2F10F5823AC7625004A7A0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2F10F6023AC8CF3004A7A0B /* LoadingLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingLayer.m; sourceTree = "<group>"; };
+		E2F10F6223AC8D15004A7A0B /* LoadingLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingLayer.h; sourceTree = "<group>"; };
+		E2F10F6323AC92E3004A7A0B /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		E2F10F6423AC9314004A7A0B /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		E2F10F6F23B0A48A004A7A0B /* LoadingStartLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingStartLayer.h; sourceTree = "<group>"; };
+		E2F10F7023B0A4A1004A7A0B /* LoadingStartLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingStartLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,7 @@
 		E2F10F4523AC7623004A7A0B /* TestSample */ = {
 			isa = PBXGroup;
 			children = (
+				E2F10F5F23AC8CBD004A7A0B /* LoadingButton */,
 				E2F10F4623AC7623004A7A0B /* AppDelegate.h */,
 				E2F10F4723AC7623004A7A0B /* AppDelegate.m */,
 				E2F10F4923AC7623004A7A0B /* SceneDelegate.h */,
@@ -74,6 +84,19 @@
 				E2F10F5823AC7625004A7A0B /* main.m */,
 			);
 			path = TestSample;
+			sourceTree = "<group>";
+		};
+		E2F10F5F23AC8CBD004A7A0B /* LoadingButton */ = {
+			isa = PBXGroup;
+			children = (
+				E2F10F6223AC8D15004A7A0B /* LoadingLayer.h */,
+				E2F10F6023AC8CF3004A7A0B /* LoadingLayer.m */,
+				E2F10F6F23B0A48A004A7A0B /* LoadingStartLayer.h */,
+				E2F10F7023B0A4A1004A7A0B /* LoadingStartLayer.m */,
+				E2F10F6323AC92E3004A7A0B /* LoadingView.h */,
+				E2F10F6423AC9314004A7A0B /* LoadingView.m */,
+			);
+			path = LoadingButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +170,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2F10F4E23AC7623004A7A0B /* ViewController.m in Sources */,
+				E2F10F6523AC9314004A7A0B /* LoadingView.m in Sources */,
 				E2F10F4823AC7623004A7A0B /* AppDelegate.m in Sources */,
+				E2F10F7123B0A4A1004A7A0B /* LoadingStartLayer.m in Sources */,
 				E2F10F5923AC7625004A7A0B /* main.m in Sources */,
+				E2F10F6123AC8CF3004A7A0B /* LoadingLayer.m in Sources */,
 				E2F10F4B23AC7623004A7A0B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +316,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7FHJB25KTR;
 				INFOPLIST_FILE = TestSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +334,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7FHJB25KTR;
 				INFOPLIST_FILE = TestSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
