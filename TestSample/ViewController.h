@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoadingView.h"
 
-@interface ViewController : UIViewController<LoadingViewDelegate>
+@interface ViewController : UIViewController
 
 
 @end

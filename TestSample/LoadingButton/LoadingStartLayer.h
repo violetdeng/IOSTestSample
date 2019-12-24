@@ -10,4 +10,6 @@
 
 @interface LoadingStartLayer : CALayer
 
+@property (nonatomic) BOOL hasStarted;
+
 @end

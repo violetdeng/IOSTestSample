@@ -37,31 +37,37 @@ IB_DESIGNABLE
 
 @synthesize delegate;
 
+-(instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        // 外层loading
+        self.loadingLayer = [LoadingLayer layer];
+        self.loadingLayer.contentsScale = [UIScreen mainScreen].scale;
+        [self.layer addSublayer:self.loadingLayer];
+        
+        // 内层startloading
+        self.loadingStartLayer = [LoadingStartLayer layer];
+        self.loadingStartLayer.contentsScale = [UIScreen mainScreen].scale;
+        [self.layer addSublayer:self.loadingStartLayer];
+
+    }
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect
 {
-    [super drawRect:rect];
-    
-    // 外层loading
-    self.loadingLayer = [LoadingLayer layer];
-    self.loadingLayer.contentsScale = [UIScreen mainScreen].scale;
-    [self.layer addSublayer:self.loadingLayer];
-    
     CGFloat width = CGRectGetWidth(self.bounds);
     CGFloat height = CGRectGetHeight(self.bounds);
     
-    self.diameter = MIN(width, height) / 2;
-    
+    self.diameter = MIN(width, height);
     self.loadingLayer.bounds = CGRectMake(0, 0, self.diameter, self.diameter);
     self.loadingLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     
     self.loadingLayer.lineWidth = self.lineWidth;
     self.loadingLayer.lineColor = self.lineColor;
     
-    // 内层startloading
-    CGFloat innerDiameter = self.diameter / 2;
-    self.loadingStartLayer = [LoadingStartLayer layer];
-    self.loadingStartLayer.contentsScale = [UIScreen mainScreen].scale;
-    [self.layer addSublayer:self.loadingStartLayer];
+    CGFloat innerDiameter = self.diameter / 4 * 3;
     self.loadingStartLayer.bounds = CGRectMake(0, 0, innerDiameter, innerDiameter);
     self.loadingStartLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
 }
@@ -85,6 +91,7 @@ IB_DESIGNABLE
 {
     CGFloat innerDiameter = self.diameter / 2;
     self.loadingStartLayer.bounds = CGRectMake(0, 0, innerDiameter, innerDiameter);
+    self.loadingStartLayer.hasStarted = NO;
     self.timeLeft = self.duration;
 }
 
@@ -92,6 +99,7 @@ IB_DESIGNABLE
 {
     CGFloat innerDiameter = self.diameter - self.lineWidth * 2;
     self.loadingStartLayer.bounds = CGRectMake(0, 0, innerDiameter, innerDiameter);
+    self.loadingStartLayer.hasStarted = YES;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:TIME_INTERVAL target:self selector:@selector(countDown:) userInfo:nil repeats:YES];
     self.timerRunning = YES;
 }
@@ -104,11 +112,16 @@ IB_DESIGNABLE
 - (void)stop
 {
     if (self.timerRunning) {
-        [self.timer invalidate];
-        self.timer = nil;
-        [self animationDidStop];
+        [self stopTimer];
         self.timerRunning = NO;
     }
+}
+
+- (void)stopTimer
+{
+    [self.timer invalidate];
+    self.timer = nil;
+    self.timerRunning = NO;
 }
 
 - (void)animationDidStop

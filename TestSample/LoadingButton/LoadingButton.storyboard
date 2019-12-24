@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3yz-dX-VDY">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading Button View Controller-->
+        <scene sceneID="w4v-cX-lza">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="3yz-dX-VDY" customClass="LoadingButtonViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jgi-Ee-eoh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hy-p3-yrb" customClass="LoadingView">
+                                <rect key="frame" x="0.0" y="134" width="320" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="c2n-su-M1Q" userLabel="height = 500">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="300"/>
+                                    </constraint>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTapStartAnimation:" destination="3yz-dX-VDY" eventType="touchDown" id="UGi-NV-hRJ"/>
+                                    <action selector="onTapStopAnimation:" destination="3yz-dX-VDY" eventType="touchCancel" id="8YH-8y-2gX"/>
+                                    <action selector="onTapStopAnimation:" destination="3yz-dX-VDY" eventType="touchUpInside" id="EnL-SE-sEB"/>
+                                    <action selector="onTapStopAnimation:" destination="3yz-dX-VDY" eventType="touchUpOutside" id="tBj-du-Dbz"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Hy-p3-yrb" firstAttribute="centerY" secondItem="Jgi-Ee-eoh" secondAttribute="centerY" id="4EA-5f-Ee7"/>
+                            <constraint firstItem="XNL-5f-S1c" firstAttribute="trailing" secondItem="4Hy-p3-yrb" secondAttribute="trailing" id="HR3-he-Ror"/>
+                            <constraint firstItem="4Hy-p3-yrb" firstAttribute="leading" secondItem="XNL-5f-S1c" secondAttribute="leading" id="KRI-0L-yOF"/>
+                            <constraint firstItem="4Hy-p3-yrb" firstAttribute="centerX" secondItem="Jgi-Ee-eoh" secondAttribute="centerX" id="rhm-vQ-48t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XNL-5f-S1c"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingView" destination="4Hy-p3-yrb" id="IfX-hO-CTY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8R-6X-Bhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="102"/>
+        </scene>
+    </scenes>
+</document>

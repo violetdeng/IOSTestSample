@@ -24,4 +24,6 @@
 
 - (void)stopAnimation;
 
+- (void)stopTimer;
+
 @end

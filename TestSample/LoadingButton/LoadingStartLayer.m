@@ -11,9 +11,10 @@
 
 @implementation LoadingStartLayer
 
+@dynamic hasStarted;
 + (BOOL)needsDisplayForKey:(NSString *)key
 {
-    if ([key isEqualToString:@"bounds"]) {
+    if ([key isEqualToString:@"bounds"] || [key isEqualToString:@"hasStarted"]) {
         return YES;
     }
     return [super needsDisplayForKey:key];
@@ -25,12 +26,16 @@
     CGContextSetFillColorWithColor(ctx, [UIColor whiteColor].CGColor);
     CGContextSetAlpha(ctx, 0.3);
     CGContextFillPath(ctx);
-    
-    CGFloat radius = MIN(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)) / 2;
-    CGContextAddEllipseInRect(ctx, CGRectMake(CGRectGetMidX(self.bounds) / 2, CGRectGetMidY(self.bounds) / 2, radius, radius));
+
+    CGFloat maxDiameter = MIN(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
+    CGFloat diameter = maxDiameter / 4 * 3;
+    if (self.hasStarted) {
+        diameter = maxDiameter / 2;
+    }
+    CGFloat radius = diameter / 2;
+    CGContextAddEllipseInRect(ctx, CGRectMake(CGRectGetMidX(self.bounds) - radius, CGRectGetMidY(self.bounds) - radius, diameter, diameter));
     CGContextSetFillColorWithColor(ctx, [UIColor whiteColor].CGColor);
     CGContextFillPath(ctx);
-    NSLog(@"loadingstartLayer drwa");
 }
 
 @end

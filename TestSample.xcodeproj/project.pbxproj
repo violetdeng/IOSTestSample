@@ -17,6 +17,11 @@
 		E2F10F6123AC8CF3004A7A0B /* LoadingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F6023AC8CF3004A7A0B /* LoadingLayer.m */; };
 		E2F10F6523AC9314004A7A0B /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F6423AC9314004A7A0B /* LoadingView.m */; };
 		E2F10F7123B0A4A1004A7A0B /* LoadingStartLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F7023B0A4A1004A7A0B /* LoadingStartLayer.m */; };
+		E2F10F7323B1A2CC004A7A0B /* LoadingButton.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F10F7223B1A2CC004A7A0B /* LoadingButton.storyboard */; };
+		E2F10F7623B1B7D0004A7A0B /* LoadingButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F7523B1B7D0004A7A0B /* LoadingButtonViewController.m */; };
+		E2F10F7A23B1F5D4004A7A0B /* RecordVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F7923B1F5D4004A7A0B /* RecordVideo.m */; };
+		E2F10F7D23B206EB004A7A0B /* RecordVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F7C23B206EB004A7A0B /* RecordVideoViewController.m */; };
+		E2F10F7F23B206FC004A7A0B /* RecordVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F10F7E23B206FC004A7A0B /* RecordVideo.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,14 @@
 		E2F10F6423AC9314004A7A0B /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		E2F10F6F23B0A48A004A7A0B /* LoadingStartLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingStartLayer.h; sourceTree = "<group>"; };
 		E2F10F7023B0A4A1004A7A0B /* LoadingStartLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingStartLayer.m; sourceTree = "<group>"; };
+		E2F10F7223B1A2CC004A7A0B /* LoadingButton.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingButton.storyboard; sourceTree = "<group>"; };
+		E2F10F7423B1B7C5004A7A0B /* LoadingButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingButtonViewController.h; sourceTree = "<group>"; };
+		E2F10F7523B1B7D0004A7A0B /* LoadingButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingButtonViewController.m; sourceTree = "<group>"; };
+		E2F10F7823B1F5C2004A7A0B /* RecordVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordVideo.h; sourceTree = "<group>"; };
+		E2F10F7923B1F5D4004A7A0B /* RecordVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordVideo.m; sourceTree = "<group>"; };
+		E2F10F7B23B206DA004A7A0B /* RecordVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordVideoViewController.h; sourceTree = "<group>"; };
+		E2F10F7C23B206EB004A7A0B /* RecordVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordVideoViewController.m; sourceTree = "<group>"; };
+		E2F10F7E23B206FC004A7A0B /* RecordVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordVideo.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +83,7 @@
 		E2F10F4523AC7623004A7A0B /* TestSample */ = {
 			isa = PBXGroup;
 			children = (
+				E2F10F7723B1F31C004A7A0B /* RecordVideo */,
 				E2F10F5F23AC8CBD004A7A0B /* LoadingButton */,
 				E2F10F4623AC7623004A7A0B /* AppDelegate.h */,
 				E2F10F4723AC7623004A7A0B /* AppDelegate.m */,
@@ -95,8 +109,23 @@
 				E2F10F7023B0A4A1004A7A0B /* LoadingStartLayer.m */,
 				E2F10F6323AC92E3004A7A0B /* LoadingView.h */,
 				E2F10F6423AC9314004A7A0B /* LoadingView.m */,
+				E2F10F7223B1A2CC004A7A0B /* LoadingButton.storyboard */,
+				E2F10F7423B1B7C5004A7A0B /* LoadingButtonViewController.h */,
+				E2F10F7523B1B7D0004A7A0B /* LoadingButtonViewController.m */,
 			);
 			path = LoadingButton;
+			sourceTree = "<group>";
+		};
+		E2F10F7723B1F31C004A7A0B /* RecordVideo */ = {
+			isa = PBXGroup;
+			children = (
+				E2F10F7823B1F5C2004A7A0B /* RecordVideo.h */,
+				E2F10F7923B1F5D4004A7A0B /* RecordVideo.m */,
+				E2F10F7B23B206DA004A7A0B /* RecordVideoViewController.h */,
+				E2F10F7C23B206EB004A7A0B /* RecordVideoViewController.m */,
+				E2F10F7E23B206FC004A7A0B /* RecordVideo.storyboard */,
+			);
+			path = RecordVideo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +185,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F10F7F23B206FC004A7A0B /* RecordVideo.storyboard in Resources */,
 				E2F10F5623AC7625004A7A0B /* LaunchScreen.storyboard in Resources */,
+				E2F10F7323B1A2CC004A7A0B /* LoadingButton.storyboard in Resources */,
 				E2F10F5323AC7625004A7A0B /* Assets.xcassets in Resources */,
 				E2F10F5123AC7623004A7A0B /* Main.storyboard in Resources */,
 			);
@@ -170,10 +201,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2F10F4E23AC7623004A7A0B /* ViewController.m in Sources */,
+				E2F10F7623B1B7D0004A7A0B /* LoadingButtonViewController.m in Sources */,
 				E2F10F6523AC9314004A7A0B /* LoadingView.m in Sources */,
+				E2F10F7D23B206EB004A7A0B /* RecordVideoViewController.m in Sources */,
 				E2F10F4823AC7623004A7A0B /* AppDelegate.m in Sources */,
 				E2F10F7123B0A4A1004A7A0B /* LoadingStartLayer.m in Sources */,
 				E2F10F5923AC7625004A7A0B /* main.m in Sources */,
+				E2F10F7A23B1F5D4004A7A0B /* RecordVideo.m in Sources */,
 				E2F10F6123AC8CF3004A7A0B /* LoadingLayer.m in Sources */,
 				E2F10F4B23AC7623004A7A0B /* SceneDelegate.m in Sources */,
 			);
