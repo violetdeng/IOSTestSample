@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="772-bM-JZO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record Video View Controller-->
+        <scene sceneID="cdY-mF-GxK">
+            <objects>
+                <viewController id="772-bM-JZO" customClass="RecordVideoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bvd-tz-FzY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rhp-WA-J5N">
+                                <rect key="frame" x="160" y="430" width="94" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbb-d7-suq">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="onStart:" destination="772-bM-JZO" eventType="touchDown" id="oWr-fi-aGY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JT6-bO-JTS">
+                                        <rect key="frame" x="53" y="0.0" width="41" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="onStop:" destination="772-bM-JZO" eventType="touchDown" id="NRN-4B-W5N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Rhp-WA-J5N" firstAttribute="centerX" secondItem="Bvd-tz-FzY" secondAttribute="centerX" id="YJz-dy-jyJ"/>
+                            <constraint firstItem="Rhp-WA-J5N" firstAttribute="centerY" secondItem="Bvd-tz-FzY" secondAttribute="centerY" id="fDf-fQ-Cta"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iGc-3l-7Kk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RvX-5f-R9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="-353"/>
+        </scene>
+    </scenes>
+</document>

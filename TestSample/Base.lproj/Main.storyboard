@@ -53,6 +53,42 @@
                                             <segue destination="gKj-RR-yZQ" kind="show" id="C95-Wb-k7U"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Zc9-i1-A4l">
+                                        <rect key="frame" x="0.0" y="99" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zc9-i1-A4l" id="NC1-vc-Xx0">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NYt-sF-SgR">
+                                                    <rect key="frame" x="20" y="20" width="343" height="3.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="RecordVideo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCI-MO-KnA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yo3-t2-bcr">
+                                                            <rect key="frame" x="0.0" y="3.5" width="343" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="NYt-sF-SgR" secondAttribute="trailing" constant="20" id="KCS-sv-6GW"/>
+                                                <constraint firstItem="NYt-sF-SgR" firstAttribute="leading" secondItem="NC1-vc-Xx0" secondAttribute="leading" constant="20" id="Sjj-d8-puo"/>
+                                                <constraint firstItem="NYt-sF-SgR" firstAttribute="top" secondItem="NC1-vc-Xx0" secondAttribute="top" constant="20" symbolic="YES" id="fke-3c-tIU"/>
+                                                <constraint firstAttribute="bottom" secondItem="NYt-sF-SgR" secondAttribute="bottom" constant="20" symbolic="YES" id="yj9-OK-CjA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="CCp-Cr-bjg" kind="show" id="zKu-XD-aqK"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -76,6 +112,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RYA-TM-TiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-167" y="-670"/>
+        </scene>
+        <!--RecordVideo-->
+        <scene sceneID="kB6-BR-Lir">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RecordVideo" id="CCp-Cr-bjg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fv2-TF-932"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f75-wO-TP2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="-642"/>
         </scene>
     </scenes>
 </document>
