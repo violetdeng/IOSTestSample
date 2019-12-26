@@ -10,11 +10,16 @@
 
 @interface RecordVideo : NSObject
 
++ (instancetype)shareInstance;
 
 - (void)requestRecordingPermission: (void(^) (BOOL))callback;
 
-- (NSError*)start;
+- (NSError *)start;
 
-- (void)save;
+- (void)stop;
+
+- (NSString *)getFilePath;
+
+- (BOOL)play;
 
 @end

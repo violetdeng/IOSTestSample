@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E217BD7723B3700100AB830B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E217BD7623B3700100AB830B /* index.html */; };
+		E217BD7923B453BA00AB830B /* axios.min.js in Resources */ = {isa = PBXBuildFile; fileRef = E217BD7823B453BA00AB830B /* axios.min.js */; };
 		E2F10F4823AC7623004A7A0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F4723AC7623004A7A0B /* AppDelegate.m */; };
 		E2F10F4B23AC7623004A7A0B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F4A23AC7623004A7A0B /* SceneDelegate.m */; };
 		E2F10F4E23AC7623004A7A0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F4D23AC7623004A7A0B /* ViewController.m */; };
@@ -22,9 +24,13 @@
 		E2F10F7A23B1F5D4004A7A0B /* RecordVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F7923B1F5D4004A7A0B /* RecordVideo.m */; };
 		E2F10F7D23B206EB004A7A0B /* RecordVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F7C23B206EB004A7A0B /* RecordVideoViewController.m */; };
 		E2F10F7F23B206FC004A7A0B /* RecordVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F10F7E23B206FC004A7A0B /* RecordVideo.storyboard */; };
+		E2F10F8123B35661004A7A0B /* Webview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F10F8023B35661004A7A0B /* Webview.storyboard */; };
+		E2F10F8523B35714004A7A0B /* WebviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F10F8423B35714004A7A0B /* WebviewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E217BD7623B3700100AB830B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		E217BD7823B453BA00AB830B /* axios.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = axios.min.js; sourceTree = "<group>"; };
 		E2F10F4323AC7623004A7A0B /* TestSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F10F4623AC7623004A7A0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E2F10F4723AC7623004A7A0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +57,9 @@
 		E2F10F7B23B206DA004A7A0B /* RecordVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordVideoViewController.h; sourceTree = "<group>"; };
 		E2F10F7C23B206EB004A7A0B /* RecordVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordVideoViewController.m; sourceTree = "<group>"; };
 		E2F10F7E23B206FC004A7A0B /* RecordVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordVideo.storyboard; sourceTree = "<group>"; };
+		E2F10F8023B35661004A7A0B /* Webview.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Webview.storyboard; sourceTree = "<group>"; };
+		E2F10F8323B3570B004A7A0B /* WebviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebviewViewController.h; sourceTree = "<group>"; };
+		E2F10F8423B35714004A7A0B /* WebviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebviewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E217BD7523B3700100AB830B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E217BD7823B453BA00AB830B /* axios.min.js */,
+				E217BD7623B3700100AB830B /* index.html */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E2F10F3A23AC7622004A7A0B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +101,8 @@
 		E2F10F4523AC7623004A7A0B /* TestSample */ = {
 			isa = PBXGroup;
 			children = (
+				E217BD7523B3700100AB830B /* Resources */,
+				E2F10F8223B356E9004A7A0B /* Webview */,
 				E2F10F7723B1F31C004A7A0B /* RecordVideo */,
 				E2F10F5F23AC8CBD004A7A0B /* LoadingButton */,
 				E2F10F4623AC7623004A7A0B /* AppDelegate.h */,
@@ -126,6 +146,16 @@
 				E2F10F7E23B206FC004A7A0B /* RecordVideo.storyboard */,
 			);
 			path = RecordVideo;
+			sourceTree = "<group>";
+		};
+		E2F10F8223B356E9004A7A0B /* Webview */ = {
+			isa = PBXGroup;
+			children = (
+				E2F10F8023B35661004A7A0B /* Webview.storyboard */,
+				E2F10F8323B3570B004A7A0B /* WebviewViewController.h */,
+				E2F10F8423B35714004A7A0B /* WebviewViewController.m */,
+			);
+			path = Webview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +215,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E217BD7723B3700100AB830B /* index.html in Resources */,
+				E2F10F8123B35661004A7A0B /* Webview.storyboard in Resources */,
 				E2F10F7F23B206FC004A7A0B /* RecordVideo.storyboard in Resources */,
 				E2F10F5623AC7625004A7A0B /* LaunchScreen.storyboard in Resources */,
 				E2F10F7323B1A2CC004A7A0B /* LoadingButton.storyboard in Resources */,
+				E217BD7923B453BA00AB830B /* axios.min.js in Resources */,
 				E2F10F5323AC7625004A7A0B /* Assets.xcassets in Resources */,
 				E2F10F5123AC7623004A7A0B /* Main.storyboard in Resources */,
 			);
@@ -204,6 +237,7 @@
 				E2F10F7623B1B7D0004A7A0B /* LoadingButtonViewController.m in Sources */,
 				E2F10F6523AC9314004A7A0B /* LoadingView.m in Sources */,
 				E2F10F7D23B206EB004A7A0B /* RecordVideoViewController.m in Sources */,
+				E2F10F8523B35714004A7A0B /* WebviewViewController.m in Sources */,
 				E2F10F4823AC7623004A7A0B /* AppDelegate.m in Sources */,
 				E2F10F7123B0A4A1004A7A0B /* LoadingStartLayer.m in Sources */,
 				E2F10F5923AC7625004A7A0B /* main.m in Sources */,
@@ -267,6 +301,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -285,10 +320,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -325,6 +361,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -337,9 +374,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_CODE_SIGN_FLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -349,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7FHJB25KTR;
 				INFOPLIST_FILE = TestSample/Info.plist;
@@ -359,6 +398,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.violet.TestSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -367,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7FHJB25KTR;
 				INFOPLIST_FILE = TestSample/Info.plist;
@@ -377,6 +418,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.violet.TestSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

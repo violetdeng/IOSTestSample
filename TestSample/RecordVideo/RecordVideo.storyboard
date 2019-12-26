@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rhp-WA-J5N">
-                                <rect key="frame" x="160" y="430" width="94" height="36"/>
+                                <rect key="frame" x="136.5" y="430" width="141" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbb-d7-suq">
                                         <rect key="frame" x="0.0" y="0.0" width="43" height="36"/>
@@ -32,6 +32,14 @@
                                         <state key="normal" title="Stop"/>
                                         <connections>
                                             <action selector="onStop:" destination="772-bM-JZO" eventType="touchDown" id="NRN-4B-W5N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJ9-BW-4jn">
+                                        <rect key="frame" x="104" y="0.0" width="37" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="onPlay:" destination="772-bM-JZO" eventType="touchDown" id="cbv-T8-JZk"/>
                                         </connections>
                                     </button>
                                 </subviews>
