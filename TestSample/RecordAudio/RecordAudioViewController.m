@@ -1,29 +1,29 @@
 //
-//  RecordVideoViewController.m
+//  RecordAudioViewController.m
 //  TestSample
 //
 //  Created by Violet Deng on 2019/12/24.
 //  Copyright © 2019 Violet Deng. All rights reserved.
 //
 
-#import "RecordVideoViewController.h"
+#import "RecordAudioViewController.h"
 
 
-@interface RecordVideoViewController() {
+@interface RecordAudioViewController() {
     
     BOOL isStartRecord;
     
-    RecordVideo *recorder;
+    RecordAudio *recorder;
 }
 
 @end
 
-@implementation RecordVideoViewController
+@implementation RecordAudioViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    recorder = [[RecordVideo alloc] init];
+    recorder = [[RecordAudio alloc] init];
 }
 
 - (IBAction)onStart:(id)sender {

@@ -1,5 +1,5 @@
 //
-//  RecordVideoViewController.h
+//  RecordAudioViewController.h
 //  TestSample
 //
 //  Created by Violet Deng on 2019/12/24.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RecordVideo.h"
+#import "RecordAudio.h"
 
-@interface RecordVideoViewController : UIViewController
+@interface RecordAudioViewController : UIViewController
 
 @end

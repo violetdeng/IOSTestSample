@@ -1,14 +1,14 @@
 //
-//  RecordVideo.m
+//  RecordAudio.m
 //  TestSample
 //
 //  Created by Violet Deng on 2019/12/24.
 //  Copyright © 2019 Violet Deng. All rights reserved.
 //
 
-#import "RecordVideo.h"
+#import "RecordAudio.h"
 
-@interface RecordVideo()
+@interface RecordAudio()
 {
     AVAudioRecorder *recorder;
     
@@ -23,9 +23,9 @@
 
 @end
 
-@implementation RecordVideo
+@implementation RecordAudio
 
-static RecordVideo *_instance = nil;
+static RecordAudio *_instance = nil;
 
 +(instancetype) shareInstance
 {
@@ -39,17 +39,17 @@ static RecordVideo *_instance = nil;
 
 + (id)allocWithZone:(struct _NSZone *)zone
 {
-    return [RecordVideo shareInstance];
+    return [RecordAudio shareInstance];
 }
 
 - (nonnull id)copyWithZone:(struct _NSZone *)zone
 {
-    return [RecordVideo shareInstance];
+    return [RecordAudio shareInstance];
 }
 
 - (nonnull id)mutableCopyWithZone:(nullable NSZone *)zone
 {
-    return [RecordVideo shareInstance];
+    return [RecordAudio shareInstance];
 }
 
 - (instancetype)init
